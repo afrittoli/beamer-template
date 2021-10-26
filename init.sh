@@ -9,8 +9,7 @@ TITLE=${1:-"Sample Presentation"}
 FILENAME=${2:-"sample"}
 
 mv template.tex "${FILENAME}.tex"
-sed -i "" 's/__TITLE__/'"$TITLE"'/g' *
-sed -i "" 's/__FILE__/'"$FILENAME"'/g' *
+sed -i "" -e 's/__TITLE__/'"$TITLE"'/g' -e 's/__FILE__/'"$FILENAME"'/g' build.sh README.md "${FILENAME}.tex"
 
 # Deploy the pre-commit hook
 cp build.sh .git/hooks/pre-commit
