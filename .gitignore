@@ -7,7 +7,6 @@
 *.out
 *.toc
 *.fmt
-svg-inkscape/
 
 ## Intermediate documents:
 *.dvi
